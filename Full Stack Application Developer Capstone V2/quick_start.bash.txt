@@ -1,0 +1,17 @@
+# 1. Clone repository
+git clone https://github.com/your-username/healthcare-ai-platform.git
+cd healthcare-ai-platform
+
+# 2. Build and run locally
+docker-compose up --build
+
+# 3. Access applications
+# Frontend: http://localhost:3000
+# Django Admin: http://localhost:8001/admin
+
+# 4. Deploy to Kubernetes
+kubectl apply -f k8s/
+
+# 5. Deploy to IBM Cloud Code Engine
+ibmcloud ce project create --name healthcare-platform
+ibmcloud ce app create --name ai-service --image yourdockerhub/ai-service
